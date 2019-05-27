@@ -15,7 +15,7 @@ namespace :db do
   task :migrate => :environment do
     Student.create_table
   end
-  
+
   desc 'drops the table'
   task :drop => :environment do
     Student.drop_table
