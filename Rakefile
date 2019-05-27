@@ -21,6 +21,12 @@ namespace :db do
     Student.drop_table
   end
 
+  desc 'seed that database with some dummy data'
+  task :seed do
+    require_relative './db/seeds.rb'
+  end
+end
+
 task :environment do
   require_relative './config/environment'
   desc 'drop into the Pry console'
